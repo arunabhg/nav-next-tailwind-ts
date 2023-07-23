@@ -14,12 +14,12 @@ const Nav = () => {
 			<Link href="/" className="flex gap-2 flex-center">
 				<Image
 					src="assets/images/logo.svg"
-					alt="Promptopia Logo"
+					alt="Logo"
 					width={30}
 					height={30}
 					className="object-contain"
 				/>
-				<p className="logo_text">Promptopia</p>
+				<p className="logo_text">Logo</p>
 			</Link>
 
 			{/* Desktop Navigation */}
@@ -34,14 +34,7 @@ const Nav = () => {
 					</button>
 
 					<Link href="/profile">
-						{/* <Image
-							src="/assets/images/logo.svg"
-							width={37}
-							height={37}
-							className="rounded-full"
-							alt="profile"
-						/> */}
-						<Profile />
+						<Profile width={37} height={37} />
 					</Link>
 				</div>
 			</div>
@@ -49,17 +42,15 @@ const Nav = () => {
 			{/* Mobile Navigation */}
 			<div className="sm:hidden flex relative">
 				<div className="flex">
-					<Image
-						src="/assets/images/logo.svg"
+					<Profile
 						width={37}
 						height={37}
-						className="rounded-full"
-						alt="profile"
 						onClick={() => {
 							setToggleDropdown((prev) => !prev);
 						}}
 					/>
-
+					/* The code below renders when Profile is clicked in mobile view. This
+					brings up a dropdown nav having the relevant links in place */
 					{toggleDropDown && (
 						<div className="dropdown">
 							<Link
