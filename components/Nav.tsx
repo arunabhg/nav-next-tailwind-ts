@@ -49,8 +49,9 @@ const Nav = () => {
 							setToggleDropdown((prev) => !prev);
 						}}
 					/>
-					/* The code below renders when Profile is clicked in mobile view. This
-					brings up a dropdown nav having the relevant links in place */
+
+					{/* The code below renders when Profile is clicked in mobile view. This
+					brings up a dropdown nav having the relevant links in place */}
 					{toggleDropDown && (
 						<div className="dropdown">
 							<Link
